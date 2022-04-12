@@ -37,25 +37,25 @@ For example, if the residue at the mutation site is a non-polar residue "G" then
 
 **(2) Residues flanking the mutation site (Resflank):** reisdues present at the N-terminal and C-terminal side of the mutation site were extracted. These dipeptide were also converted to numerical values based on the below criteria.
 
-A	1
-C	2
-D	3
-E	4
-F	5
-G	6
-H	7
-I	8
-K	9
-L	10
-M	11
-N	12
-P	13
-Q	14
-R	15
-S	16
-T	17
-V	18
-W	19
+A	1;
+C	2;
+D	3;
+E	4;
+F	5;
+G	6;
+H	7;
+I	8;
+K	9;
+L	10;
+M	11;
+N	12;
+P	13;
+Q	14;
+R	15;
+S	16;
+T	17;
+V	18;
+W	19;
 Y	20
 
 Example: Mutation site has residue "M (MET)". It has residue "N (GLU)" on the N-terminal side and "C (CYS)" on C-terminal side. Therefore, mutation site in protein looks like "NMC"
