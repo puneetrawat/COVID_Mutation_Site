@@ -71,3 +71,19 @@ Note: Using smaller digit on first position also avoids confusion for some posit
 Note: "UniRef90 is built by clustering UniRef100 sequences such that each cluster is composed of sequences that have at least 90% sequence identity to, and 80% overlap with, the longest sequence in the cluster (the seed sequence)."
 
 The SARS-CoV-2 protein positions containing mutation(s) and above calculated features are added in the GitHub repository.
+
+<h4> Model development: </h4>
+
+We have used open-source machine learning development software "Weka (version 3.8.6)" for the study. Here we have explained using the dataset(s) to check the prediction performance of the model.
+
+1. In the "Preprocess" tab, click on the "Open file"
+2. Select any of the dataset (30% selection cutoff is baseline model)
+3. Now you can four features (racc_dssp, pssm_score,wild-type,dipeptide_palendrome) representing above explained features. The last feature (class_full) is binary classification of the mutation site (high mutability class or low mutability class)
+4. Now go to "Classify" tab and choose the "Classifier".
+5. Select "Weka -> classifiers -> functions -> SMO". You can now see the default parameters for the support vector machine model.
+6. Click on the parameter tab next to "choose" classifier option. It will open a new GUI window.
+7. Click on "buildCalibrationModels" drop down option and select "True". change the value of "c" to 2.0.
+8. Click "OK" and select "Use training dataset" radio button option in the "Test options" section.
+9. you can how see the performance of the model at "Classifier output" section.
+
+See weka documentation here (https://www.cs.waikato.ac.nz/ml/weka/) for more details.
